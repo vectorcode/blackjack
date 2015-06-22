@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang='ru'>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="css/reset.css" type="text/css" rel="stylesheet">
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body ontouchstart=""> 
+
+  <div class="spinner-bg"></div>
+  <div class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+  </div>
+  
+  <div class="game" id="content">
+    <div class="main-game-block">
+      <img src="images/bg.jpg" class="bg1">
+      <img src="images/bg-2.png" class="bg2">
+      <div class="lefttop"><span>19</span></div>
+      <div class="fs"></div>
+      <div class="koloda"></div>
+
+      <div class="for-card top-block">
+        <div class="card p-1"><img src="images/cards/clubs/1.png"></div>
+        <div class="card p-2"><img src="images/cards/clubs/5.png"></div>
+      </div>
+
+      <div class="fs-content">
+        <div class="fishka f-1 p-1"></div>
+        <div class="fishka f-50 p-2"></div>
+        <div class="fishka f-100 p-3"></div>
+      </div>
+
+      <div class="for-card bottom-block">
+        <div class="card p-1"><img src="images/cards/clubs/1.png"></div>
+        <div class="card p-2"><img src="images/cards/clubs/5.png"></div>
+      </div>
+
+      <div class="message m-1">
+        
+      </div>
+
+      <div class="big-fishki">
+        <div class="big-f-1"></div>
+        <div class="big-f-5"></div>
+        <div class="big-f-25"></div>
+        <div class="big-f-50"></div>
+        <div class="big-f-100"></div>
+      </div>
+
+      <div class="nav">
+        <div class="bj"><span>BJ</span></div>
+        <div class="inputs">
+          <div class="text1">
+            <div class="left">credit</div>
+            <div class="right">5000</div>
+          </div>
+          <div class="text2">
+            <div class="left">bet</div>
+            <div class="right">5000</div>
+          </div>
+        </div>
+        <div class="split">
+          <div class="label"></div>
+          <img src="images/split-1.png" class="normal">
+          <img src="images/split-2.png" class="active">
+        </div>
+        <div class="insurance">
+          <div class="label"></div>
+          <img src="images/insurance-1.png" class="normal">
+          <img src="images/insurance-2.png" class="active">
+        </div>
+        <div class="double">
+          <div class="label"></div>
+          <img src="images/double-1.png" class="normal">
+          <img src="images/double-2.png" class="active">
+        </div>
+        <div class="stand">
+          <div class="label"></div>
+          <img src="images/stand-1.png" class="normal">
+          <img src="images/stand-2.png" class="active">
+        </div>
+        <div class="clearbtn">
+          <div class="label"></div>
+          <img src="images/clear-1.png" class="normal">
+          <img src="images/clear-2.png" class="active">
+        </div>
+        <div class="hit">
+          <div class="label"></div>
+          <img src="images/hit-1.png" class="normal">
+          <img src="images/hit-2.png" class="active">
+        </div>
+        <div class="deal">
+          <div class="label"></div>
+          <img src="images/deal-1.png" class="normal">
+          <img src="images/deal-2.png" class="active">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/jquery-1.7.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(function(){
+      resizze();
+
+    });
+
+    $(window).resize(function(){
+      resizze();
+    });
+
+    $(window).load(function(){
+      $(".spinner-bg").fadeOut();
+      $(".spinner").fadeOut();
+    });
+
+    function resizze () {
+      var k = 1.33;
+      var height = $(window).height();
+      $(".game").css({"width": (height * k) + "px"});
+      $(".bg").css({"width": (height * k) + "px"});
+    }
+
+  </script>
+
+</body>
+</html>
