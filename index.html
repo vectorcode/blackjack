@@ -19,7 +19,7 @@
     <div class="main-game-block">
       <img src="images/bg.jpg" class="bg1">
       <img src="images/bg-2.png" class="bg2">
-      <div class="lefttop"><span>19</span></div>
+      <div class="lefttop"><span id='v_sum_dil'>19</span></div>
       <div class="fs"></div>
       <div class="koloda"></div>
 
@@ -28,7 +28,7 @@
         <div class="card p-2"><img src="images/cards/clubs/5.png"></div>
       </div>
 
-      <div class="fs-content">
+      <div class="fs-content" id="blk_tbl_fishki">
         <div class="fishka f-1 p-1"></div>
         <div class="fishka f-50 p-2"></div>
         <div class="fishka f-100 p-3"></div>
@@ -43,7 +43,7 @@
         
       </div>
 
-      <div class="big-fishki">
+      <div class="big-fishki" id='blk_big_fishki'>
         <div class="big-f-1"></div>
         <div class="big-f-5"></div>
         <div class="big-f-25"></div>
@@ -52,48 +52,48 @@
       </div>
 
       <div class="nav">
-        <div class="bj"><span>BJ</span></div>
+        <div class="bj"><span id='v_sum_user'>BJ</span></div>
         <div class="inputs">
           <div class="text1">
             <div class="left">credit</div>
-            <div class="right">5000</div>
+            <div class="right" id='v_credit'>5000</div>
           </div>
           <div class="text2">
             <div class="left">bet</div>
-            <div class="right">5000</div>
+            <div class="right" id="v_bet">5000</div>
           </div>
         </div>
-        <div class="split">
+        <div class="split" id='btn_split'>
           <div class="label"></div>
           <img src="images/split-1.png" class="normal">
           <img src="images/split-2.png" class="active">
         </div>
-        <div class="insurance">
+        <div class="insurance" id="btn_insurance">
           <div class="label"></div>
           <img src="images/insurance-1.png" class="normal">
           <img src="images/insurance-2.png" class="active">
         </div>
-        <div class="double">
+        <div class="double" id="btn_double">
           <div class="label"></div>
           <img src="images/double-1.png" class="normal">
           <img src="images/double-2.png" class="active">
         </div>
-        <div class="stand">
+        <div class="stand" id="btn_stand">
           <div class="label"></div>
           <img src="images/stand-1.png" class="normal">
           <img src="images/stand-2.png" class="active">
         </div>
-        <div class="clearbtn">
+        <div class="clearbtn" id="btn_clear">
           <div class="label"></div>
           <img src="images/clear-1.png" class="normal">
           <img src="images/clear-2.png" class="active">
         </div>
-        <div class="hit">
+        <div class="hit" id='btn_hit'>
           <div class="label"></div>
           <img src="images/hit-1.png" class="normal">
           <img src="images/hit-2.png" class="active">
         </div>
-        <div class="deal">
+        <div class="deal" id="btn_deal">
           <div class="label"></div>
           <img src="images/deal-1.png" class="normal">
           <img src="images/deal-2.png" class="active">
@@ -104,30 +104,11 @@
   </div>
 
   <script src="js/jquery-1.7.1.min.js"></script>
-
-  <script type="text/javascript">
-    $(function(){
-      resizze();
-
-    });
-
-    $(window).resize(function(){
-      resizze();
-    });
-
-    $(window).load(function(){
-      $(".spinner-bg").fadeOut();
-      $(".spinner").fadeOut();
-    });
-
-    function resizze () {
-      var k = 1.33;
-      var height = $(window).height();
-      $(".game").css({"width": (height * k) + "px"});
-      $(".bg").css({"width": (height * k) + "px"});
-    }
-
-  </script>
+  <script src="js/bj.model.js"></script>
+  <script src="js/bj.view.js"></script>
+  <script src="js/bj.controller.js"></script>
+  <script src="js/plagin.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
