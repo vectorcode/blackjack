@@ -24,5 +24,5 @@
 
 
 $(document).ready(function() {
-  BjC.init();
+  BjC.init(1000);
 });
